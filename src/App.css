@@ -1,0 +1,287 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%; }
+
+header {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: darkgreen;
+  height: 60px; }
+  header h1 {
+    margin: 0 0 0 40px;
+    padding-top: 10px;
+    font-family: "Lato", sans-serif;
+    color: white;
+    font-weight: normal;
+    float: left; }
+
+.container {
+  margin: 0 auto;
+  margin-top: 3%;
+  padding: 0;
+  width: 60%; }
+  .container h1 {
+    text-align: center; }
+
+.recipes {
+  margin: 20px 0;
+  padding: 20px;
+  background: #f0f0f0; }
+
+button {
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  border-radius: 7px;
+  border: none; }
+
+.recipe-button {
+  background: #337ab7;
+  padding: 10px;
+  color: white;
+  font-size: 1.2em;
+  margin-bottom: 20px; }
+
+.recipe-button:hover {
+  background: #285f8f;
+  cursor: pointer; }
+
+.add-button {
+  font-size: 0.8em;
+  padding: 10px;
+  background: #337ab7;
+  color: white; }
+
+.add-button:hover {
+  background: #285f8f;
+  cursor: pointer; }
+
+.delete-button {
+  font-size: 0.8em;
+  padding: 10px;
+  background: #d9534f;
+  color: white; }
+
+.delete-button:hover {
+  background: #c9302c;
+  cursor: pointer; }
+
+.edit-button {
+  margin-left: 5px;
+  background: white;
+  font-size: 0.8em;
+  padding: 10px;
+  background: #28a745;
+  color: white; }
+
+.edit-button:hover {
+  background: #e6e6e6;
+  cursor: pointer; }
+
+.close-button {
+  margin-left: 5px;
+  margin-right: 15px;
+  background: white;
+  border: 1px solid #d2d2d2;
+  font-size: 0.8em;
+  padding: 10px;
+  background: white; }
+
+.close-button:hover {
+  background: #e6e6e6;
+  cursor: pointer; }
+
+.overlay {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(180, 180, 180, 0.6);
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  left: 0; }
+
+.recipe-form {
+  position: absolute;
+  float: left;
+  width: 600px;
+  height: 340px;
+  margin-left: -300px;
+  top: 10%;
+  left: 50%;
+  z-index: 100;
+  background: white; }
+  .recipe-form header {
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid #d2d2d2; }
+    .recipe-form header h3 {
+      font-weight: normal;
+      margin: 0;
+      margin-left: 15px;
+      padding-top: 15px; }
+    .recipe-form header div {
+      float: right;
+      margin: 0;
+      margin-top: -20px;
+      margin-right: 15px;
+      padding: 0;
+      font-weight: bold;
+      color: #b4b4b4;
+      border: none; }
+  .recipe-form form {
+    margin-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%; }
+    .recipe-form form dl {
+      clear: both;
+      padding-bottom: 50px; }
+    .recipe-form form dt label {
+      font-weight: bold; }
+    .recipe-form form dd {
+      margin-left: 0;
+      margin-top: 5px;
+      float: left;
+      width: 100%; }
+    .recipe-form form input {
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      -ms-border-radius: 8px;
+      border-radius: 8px;
+      border: 1px solid #c8c8c8;
+      width: 91%;
+      padding: 10px; }
+    .recipe-form form textarea {
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      -ms-border-radius: 8px;
+      border-radius: 8px;
+      border: 1px solid #c8c8c8;
+      width: 91%;
+      padding: 10px; }
+  .recipe-form div {
+    width: 100%;
+    text-align: right;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    border-top: 1px solid #d2d2d2; }
+    .recipe-form div button {
+      padding: 10px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      border-radius: 5px; }
+
+.recipe-input-appear {
+  opacity: 0;
+  transition: opacity 5000ms ease-in; }
+
+.recipe-input-appear.recipe-input-appear-active {
+  opacity: 1; }
+
+.recipe-input-enter {
+  opacity: 0;
+  transition: opacity 700ms ease-in; }
+
+.recipe-input-enter.recipe-input-enter-active {
+  opacity: 1; }
+
+.recipe-edit-appear {
+  opacity: 0;
+  transition: opacity 5000ms ease-in; }
+
+.recipe-edit-appear.recipe-edit-appear-active {
+  opacity: 1; }
+
+.recipe-edit-enter {
+  opacity: 0;
+  transition: opacity 700ms ease-in; }
+
+.recipe-edit-enter.recipe-edit-enter-active {
+  opacity: 1; }
+
+.overlay-appear {
+  opacity: 0; }
+
+.overlay-appear.overlay-appear-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in; }
+
+.overlay-leave {
+  opacity: 1;
+  transition: opacity 500ms ease-out; }
+
+.overlay-leave.overlay-leave-active {
+  opacity: 0; }
+
+.form-appear {
+  opacity: 0;
+  transition: all 500ms ease-out; }
+
+.form-appear.form-appear-active {
+  opacity: 1; }
+
+.recipe-form-enter {
+  top: -10%;
+  -webkit-transition: top 500ms ease-in; }
+
+.recipe-form-enter.recipe-form-enter-active {
+  top: 10%; }
+
+.recipe-form-leave {
+  top: 10%;
+  -webkit-transition: all 500ms ease-out; }
+
+.recipe-form-leave.recipe-form-leave-active {
+  top: -10%; }
+
+.recipe ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-weight: bold;
+  list-style-type: none;
+  background: #97ff97; }
+  .recipe ul li {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    text-transform: capitalize; }
+    .recipe ul li label {
+      padding-left: 15px; }
+    .recipe ul li h4 {
+      text-align: center;
+      padding-top: 20px;
+      font-weight: normal; }
+    .recipe ul li hr {
+      border: none;
+      border-bottom: 1px solid gainsboro;
+      margin-bottom: 20px; }
+    .recipe ul li ul {
+      margin: 0;
+      margin-top: -10px;
+      padding: 0;
+      background: white;
+      list-style-type: none; }
+      .recipe ul li ul .ingredients {
+        margin: 0 15px; }
+        .recipe ul li ul .ingredients li {
+          margin: 0;
+          margin-top: -1px;
+          padding: 15px 0 10px 0;
+          text-indent: 15px;
+          text-transform: capitalize;
+          border: 1px solid gainsboro;
+          font-weight: normal; }
+      .recipe ul li ul .buttons {
+        margin: 15px 15px;
+        padding-bottom: 15px; }
